@@ -14,7 +14,8 @@ interface
 uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
   Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.ExtCtrls, Vcl.ComCtrls,
-  Vcl.Shell.ShellCtrls, Vcl.Menus, BrowserThreadUnit, GR32_Image, Vcl.ExtDlgs;
+  Vcl.Shell.ShellCtrls, Vcl.Menus, BrowserThreadUnit, GR32_Image, GR32, Vcl.ExtDlgs,
+  System.ImageList, Vcl.ImgList, Vcl.ToolWin;
 
 type
   TfrmMain = class(TForm)
@@ -33,6 +34,11 @@ type
     StatusBar: TStatusBar;
     mnu_info: TMenuItem;
     mnu_about: TMenuItem;
+    ToolBar: TToolBar;
+    Btn_Rotate90: TToolButton;
+    Btn_Rotate270: TToolButton;
+    ImgList_Toolbar: TImageList;
+    Btn_Rotate180: TToolButton;
     procedure FormShow(Sender: TObject);
     procedure FormCreate(Sender: TObject);
     procedure FormDestroy(Sender: TObject);
@@ -43,6 +49,9 @@ type
     procedure menu_CloseClick(Sender: TObject);
     procedure menu_ImageOpenClick(Sender: TObject);
     procedure mnu_aboutClick(Sender: TObject);
+    procedure Btn_Rotate90Click(Sender: TObject);
+    procedure Btn_Rotate270Click(Sender: TObject);
+    procedure Btn_Rotate180Click(Sender: TObject);
   private
     { Private declarations }
     fBrowserThread : TBrowserThread;
@@ -63,6 +72,63 @@ implementation
 {$R *.dfm}
 
 uses uAbout;
+
+procedure TfrmMain.Btn_Rotate180Click(Sender: TObject);
+var
+    tmp : TCustomBitmap32;
+begin
+    // 180도 회전
+    if ImgView32.Bitmap.Empty then Exit;
+    Screen.Cursor := crHourGlass;
+
+    tmp := TCustomBitmap32.Create();
+
+    try
+        tmp.Assign(ImgView32.Bitmap);
+        tmp.Rotate180(ImgView32.Bitmap);
+        tmp.Free;
+    finally
+	    Screen.Cursor := crDefault;
+    end;
+end;
+
+procedure TfrmMain.Btn_Rotate270Click(Sender: TObject);
+var
+    tmp : TCustomBitmap32;
+begin
+    // 270도 회전
+    if ImgView32.Bitmap.Empty then Exit;
+    Screen.Cursor := crHourGlass;
+
+    tmp := TCustomBitmap32.Create();
+
+    try
+        tmp.Assign(ImgView32.Bitmap);
+        tmp.Rotate270(ImgView32.Bitmap);
+        tmp.Free;
+    finally
+	    Screen.Cursor := crDefault;
+    end;
+end;
+
+procedure TfrmMain.Btn_Rotate90Click(Sender: TObject);
+var
+    tmp : TCustomBitmap32;
+begin
+    // 90도 회전
+    if ImgView32.Bitmap.Empty then Exit;
+    Screen.Cursor := crHourGlass;
+
+    tmp := TCustomBitmap32.Create();
+
+    try
+        tmp.Assign(ImgView32.Bitmap);
+        tmp.Rotate90(ImgView32.Bitmap);
+        tmp.Free;
+    finally
+	    Screen.Cursor := crDefault;
+    end;
+end;
 
 procedure TfrmMain.FormCreate(Sender: TObject);
 begin
