@@ -53,6 +53,7 @@ object frmAbout: TfrmAbout
     Font.Name = 'Tahoma'
     Font.Style = []
     ParentFont = False
+    OnClick = Label3Click
   end
   object Button1: TButton
     Left = 212
