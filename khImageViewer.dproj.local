@@ -1,15 +1,15 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <BorlandProject>
 	<Transactions>
+    <Transaction>1899-12-30 00:00:00.000.151,D:\04_Homebrew\khImageViewer\uMain.pas=C:\Users\조용호\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>1899-12-30 00:00:00.000.074,D:\04_Homebrew\khImageViewer\Unit1.dfm=D:\04_Homebrew\khImageViewer\uAbout.dfm</Transaction>
     <Transaction>1899-12-30 00:00:00.000.476,=C:\Users\조용호\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
-    <Transaction>1899-12-30 00:00:00.000.151,C:\Users\조용호\Documents\Embarcadero\Studio\Projects\Unit1.pas=D:\04_Homebrew\khImageViewer\uMain.pas</Transaction>
+    <Transaction>1899-12-30 00:00:00.000.586,D:\04_Homebrew\khImageViewer\khImageViewer.dproj=C:\Users\조용호\Documents\Embarcadero\Studio\Projects\Project1.dproj</Transaction>
     <Transaction>1899-12-30 00:00:00.000.725,=C:\Users\조용호\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
-    <Transaction>1899-12-30 00:00:00.000.151,C:\Users\조용호\Documents\Embarcadero\Studio\Projects\Unit1.dfm=D:\04_Homebrew\khImageViewer\uMain.dfm</Transaction>
-    <Transaction>1899-12-30 00:00:00.000.074,D:\04_Homebrew\khImageViewer\uAbout.pas=D:\04_Homebrew\khImageViewer\Unit1.pas</Transaction>
     <Transaction>1899-12-30 00:00:00.000.916,=D:\04_Homebrew\khImageViewer\Unit1.pas</Transaction>
+    <Transaction>1899-12-30 00:00:00.000.074,D:\04_Homebrew\khImageViewer\Unit1.pas=D:\04_Homebrew\khImageViewer\uAbout.pas</Transaction>
     <Transaction>1899-12-30 00:00:00.000.802,=D:\04_Homebrew\khImageViewer\Unit1.pas</Transaction>
-    <Transaction>1899-12-30 00:00:00.000.813,D:\04_Homebrew\khImageViewer\Unit1.pas=D:\04_Homebrew\khImageViewer\BrowserThreadUnit.pas</Transaction>
-    <Transaction>1899-12-30 00:00:00.000.074,D:\04_Homebrew\khImageViewer\uAbout.dfm=D:\04_Homebrew\khImageViewer\Unit1.dfm</Transaction>
-    <Transaction>1899-12-30 00:00:00.000.586,C:\Users\조용호\Documents\Embarcadero\Studio\Projects\Project1.dproj=D:\04_Homebrew\khImageViewer\khImageViewer.dproj</Transaction>
+    <Transaction>1899-12-30 00:00:00.000.813,D:\04_Homebrew\khImageViewer\BrowserThreadUnit.pas=D:\04_Homebrew\khImageViewer\Unit1.pas</Transaction>
+    <Transaction>1899-12-30 00:00:00.000.151,D:\04_Homebrew\khImageViewer\uMain.dfm=C:\Users\조용호\Documents\Embarcadero\Studio\Projects\Unit1.dfm</Transaction>
   </Transactions>
 </BorlandProject>

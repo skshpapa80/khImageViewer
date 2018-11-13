@@ -86,8 +86,6 @@ object frmMain: TfrmMain
       ScrollBars.Size = 17
       OverSize = 0
       TabOrder = 1
-      ExplicitTop = 300
-      ExplicitHeight = 348
     end
     object ToolBar: TToolBar
       Left = 0
@@ -99,8 +97,6 @@ object frmMain: TfrmMain
       Images = ImgList_Toolbar
       ShowCaptions = True
       TabOrder = 2
-      ExplicitLeft = 3
-      ExplicitTop = 303
       object Btn_Rotate90: TToolButton
         Left = 0
         Top = 0
@@ -171,7 +167,7 @@ object frmMain: TfrmMain
     Left = 432
     Top = 336
     Bitmap = {
-      494C010101000800200010001000FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
+      494C010101000800240010001000FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
       0000000000003600000028000000400000001000000001002000000000000010
       0000000000000000000000000000000000000000000000000000000000000000
       0000000000000000000000000000000000000000000000000000000000000000

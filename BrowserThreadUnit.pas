@@ -4,7 +4,7 @@ interface
 
 uses
     Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
-    Vcl.Controls, Vcl.ImgList, System.SyncObjs, WinApi.CommCtrl, System.Masks, ShlObj, Jpeg;
+    Vcl.Controls, Vcl.ImgList, System.SyncObjs, WinApi.CommCtrl, System.Masks, ShlObj, Jpeg, pngimage;
 
 type
     TBrowserThread = class;
@@ -46,6 +46,16 @@ type
         property ImageList : TCustomImageList read GetImageList;
         property OnBrowsedFiles : TNotifyEvent read fOnFiles write fOnFiles;
     end;
+
+const
+    US_BITMAP_TYPE = $4D42;
+    US_JPEG_TYPE   = $FFFFD8FF;
+    US_GIF_TYPE    = $4947;
+    US_WMF_TYPE    = $FFFFCDD7;
+    US_TIF_TYPE    = $4949;
+    US_PCX_TYPE    = $50A;
+    US_PSD_TYPE    = $4238;
+    US_PNG_TYPE    = $5089;
 
 implementation
 
@@ -112,6 +122,10 @@ var
     isJPeg : boolean;
     w, h, c, rw, rh : Integer;
     g : TGraphic;
+    sExt: string;
+    MyType: SmallInt;
+    MyFile: TFileStream;
+    p : TPNGImage;
 begin
     pict := Nil;
     j := Nil;
@@ -123,14 +137,40 @@ begin
             bmp.Height := fImageList.Height;
             r := Rect (0, 0, bmp.Width, bmp.Height);
 
+            // 파일 타입 알아내기
+            MyFile := TFileStream.Create(fileName, fmOpenRead + fmShareDenyNone);
+            MyFile.Read(MyType, SizeOf(MyType));
+
+            sExt := '';
+            case MyType of
+                US_BITMAP_TYPE: sExt := 'BMP';
+                US_JPEG_TYPE: sExt := 'JPEG';
+                US_GIF_TYPE: sExt := 'GIF';
+                US_WMF_TYPE: sExt := 'WMF';
+                US_TIF_TYPE: sExt := 'TIF';
+                US_PCX_TYPE: sExt := 'PCX';
+                US_PSD_TYPE: sExt := 'PSD';
+                US_PNG_TYPE: sExt := 'PNG';
+            end;
+            MyFile.Free;
+
             IsJpeg := UpperCase (ExtractFileExt (fileName)) = '.JPG';
 
-            if isJPeg then begin
+            if sExt = 'JPEG' then begin
+                // JPEG 처리
                 m := TFileStream.Create (fileName, fmOpenRead or fmShareDenyNone);
                 j := TJPegImage.Create;
                 j.Scale := jsEighth;
                 j.LoadFromStream (m);
                 g := j;
+            end
+            else if sExt = 'PNG' then begin
+                // PNG 처리
+                m := TFileStream.Create (fileName, fmOpenRead or fmShareDenyNone);
+                p := TPngImage.Create;
+                m.Position := 0;
+                p.LoadFromStream(m);
+                g := p;
             end
             else begin
                 pict := TPicture.Create;
