@@ -1,8 +1,8 @@
-// 작성자: 조용호 (skshpapa80@gmail.com)
+// 작성자: 선경선향아빠 (skshpapa80@gmail.com)
 // 프로그램명 : 델파이로 만든 이미지 뷰어
 // 작성일 : 2017-07-25
 // 수정일 : 2018-11-14
-// 블로그 : https://www.skshpapa80.net
+// 블로그 : https://skshpapa80.github.io/
 //
 // 사용자가 선택한 폴더의 썸네일 표시하고
 // 썸네일을 선택하면 큰사진 불러오기
