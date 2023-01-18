@@ -6,6 +6,6 @@ https://skshpapa80.github.io/2017/07/25/Delphi-Image-Viewer/
 
 Used Component
 
-ShellTreeview - https://skshpapa80.github.io/2022/10/05/Delphi-ShellControls-add/
+ShellTreeview - https://skshpapa80.blogspot.com/2022/10/delphi-shellcontols.html
 
 Graphics32 -  https://github.com/graphics32/graphics32
