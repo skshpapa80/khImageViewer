@@ -10,10 +10,10 @@
 
 ![screenshot](https://skshpapa80.github.io/assets/images/khImageViewer.webp)
 
-https://codingplusplus.tistory.com/33
+https://www.raycho12.pe.kr/2017/07/25/delphi-image-viewer/
 
 Used Component
 
-ShellTreeview - https://codingplusplus.tistory.com/62
+ShellTreeview - https://www.raycho12.pe.kr/2024/02/27/delphi-shellcontols-reg/
 
 Graphics32 -  https://github.com/graphics32/graphics32
