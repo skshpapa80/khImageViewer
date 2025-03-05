@@ -10,7 +10,7 @@
 
 ![screenshot](https://skshpapa80.github.io/assets/images/khImageViewer.webp)
 
-https://skshpapa80.blogspot.com/2017/07/blog-post.html
+https://blog.raycho12.pe.kr/2017/07/25/homebrew-image-viewer/
 
 Used Component
 
