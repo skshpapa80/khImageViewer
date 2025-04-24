@@ -8,9 +8,7 @@
 
 트리 모양은 ShellTreeview 를 사용했구요. 
 
-![screenshot](https://skshpapa80.github.io/assets/images/khImageViewer.webp)
-
-https://blog.raycho12.pe.kr/2017/07/25/homebrew-image-viewer/
+https://www.raycho12.pe.kr/2017/07/25/homebrew-image-viewer/
 
 Used Component
 
