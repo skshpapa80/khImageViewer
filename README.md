@@ -1,5 +1,7 @@
 # khImageViewer
 
+![ScreenShot](https://skshpapa80.github.io/assets/images/khImageViewer.webp)
+
 델파이로 만든 이미지 뷰어
 델파이 커뮤니티 버전으로 개발했습니다. 
 
